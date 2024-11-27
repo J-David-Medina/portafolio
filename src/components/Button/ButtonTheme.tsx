@@ -1,17 +1,16 @@
 import ".//Header.css";
-import { useAppContext } from "../../context/ContextApp";
 
 const ThemeSwitch = () => {
-  const { theme, handleChangeTheme } = useAppContext();
+  /* const { theme, handleChangeTheme } = useAppContext(); */
 
   return (
     <label htmlFor="themeSwitch" className="theme-switch">
       <input
         id="themeSwitch"
         type="checkbox"
-        checked={theme === "dark"}
+        /*  checked={theme === "dark"} */
         className="theme-switch__checkbox"
-        onChange={handleChangeTheme}
+        /*    onChange={handleChangeTheme} */
       />
       <div className="theme-switch__container">
         <div className="theme-switch__clouds"></div>
