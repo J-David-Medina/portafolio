@@ -20,10 +20,10 @@ const ContextApp: React.FC<ProviderProps> = ({ children }) => {
         "light";
   });
 
-  useEffect(() => {
+  /*   useEffect(() => {
     document.documentElement.classList.toggle("dark", theme === "dark");
     localStorage.setItem("theme", theme);
-  }, [theme]);
+  }, [theme]); */
 
   const handleChangeTheme = () => setTheme((prev) => (prev === "light" ? "dark" : "light"));
 
