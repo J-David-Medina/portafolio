@@ -7,7 +7,7 @@ export const Home = () => {
 
       <div className="text-gray-500 pl-4">
         <div className="mt-3 space-y-2 border-b p-3 border-slate-400">
-          <h1 className="text-2xl font-bold text-black">David Medina</h1>
+          <h1 className="text-2xl font-bold text-black">Juan David Medina</h1>
           <p className="text-sm font-bold">Desarrollador web</p>
         </div>
 
