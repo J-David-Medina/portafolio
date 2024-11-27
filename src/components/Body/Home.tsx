@@ -3,7 +3,7 @@ import pdf from "../../assets/pdf/CV.pdf";
 export const Body = () => {
   return (
     <>
-      <div className="flex justify-between pb-10 ">
+      <div className="md:flex w-52 md:w-auto items-center space-y-4  justify-between pb-10 ">
         <h2 className="font-bold text-4xl text-gray-500">Bienvenid@s</h2>
 
         <a
@@ -23,6 +23,7 @@ export const Body = () => {
           Descargar CV
         </a>
       </div>
+
       <div className=" space-y-3">
         <p>
           Soy un <strong>desarrollador de software</strong> con una gran pasión por la tecnología y el aprendizaje
@@ -41,10 +42,13 @@ export const Body = () => {
           dispuesta a asumir nuevos desafíos para mejorar mis habilidades técnicas y contribuir al éxito del equipo.
         </p>
       </div>
-      <div className="space-y-3 mt-6">
-        <div className="space-y-3">
+      <div className="space-y-3 mt-6  flex items-start flex-col">
+        <div className="space-y-3   ">
           <h3 className="text-lg font-bold text-gray-500">Frontend</h3>
-          <ul className="flex space-x-6 text-gray-500 font-bold">
+          <ul
+            className="grid grid-cols-3 md:grid-flow-col-dense  md:space-x-7  space-y-4 text-gray-500 font-bold
+          items-center justify-center"
+          >
             <li className="flex flex-col items-center">
               <img src="https://img.icons8.com/color/48/html-5--v1.png" alt="html" className="w-10 h-10" />
               <p>Html</p>
@@ -55,7 +59,7 @@ export const Body = () => {
             </li>
             <li className="flex flex-col items-center">
               <img src="https://img.icons8.com/color/48/tailwind_css.png" alt="tailwind_css" className="w-10 h-10" />
-              <p>Tailwind CSS </p>
+              <p>Tailwind </p>
             </li>
             <li className="flex flex-col items-center">
               <img src="https://img.icons8.com/color/48/bootstrap--v2.png" alt="bootstrap" className="w-10 h-10" />
@@ -78,7 +82,7 @@ export const Body = () => {
 
         <div className="space-y-3">
           <h3 className="text-lg font-bold text-gray-500">Backend</h3>
-          <ul className="flex space-x-6 text-gray-500 font-bold">
+          <ul className="flex fle space-x-6 text-gray-500 font-bold">
             <li className="flex flex-col items-center">
               <img src="https://img.icons8.com/color/48/python--v1.png" alt="python" className="w-10 h-10" />
               <p>Python </p>

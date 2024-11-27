@@ -39,7 +39,7 @@ export const Contact = () => {
       <h2 className="font-bold text-4xl text-gray-500 mt-10">Contacto</h2>
 
       <form onSubmit={handleSubmit(onSubmit)} className="p-4 space-y-4">
-        <div className="grid gap-4 mb-3 grid-cols-2">
+        <div className="grid gap-2 mb-3 md:grid-cols-2">
           <div>
             <input
               id="name"
