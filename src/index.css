@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply transition-background duration-500 ease-in-out;
+}
+
+body {
+  @apply transition-background duration-500 ease-in-out;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animated-section {
+  animation: slideInFromLeft 1s ease;
+  scroll-margin-top: 5rem;
+}
+
+@keyframes spin89345 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loader {
+  @apply w-16 h-16 border-4 border-slate-400 border-l-transparent rounded-full;
+  animation: spin89345 1s linear infinite;
+}
