@@ -5,35 +5,34 @@ interface ProviderProps {
 }
 
 interface ContextAppValue {
-  theme: "light" | "dark";
-  handleChangeTheme: () => void;
+  /*   theme: "light" | "dark";
+  handleChangeTheme: () => void; */
 }
 
 export const GlobalContextApp = createContext<ContextAppValue | null>(null);
 const ContextApp: React.FC<ProviderProps> = ({ children }) => {
-  const [theme, setTheme] = useState(() => {
+  /*  const [theme, setTheme] = useState(() => {
     const savedTheme = localStorage.getItem("theme");
     return savedTheme
       ? (savedTheme as "light" | "dark")
-      : /*     : window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark" */
+      :     : window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark" 
         "light";
-  });
+  });*/
 
   /*   useEffect(() => {
     document.documentElement.classList.toggle("dark", theme === "dark");
     localStorage.setItem("theme", theme);
   }, [theme]); */
 
-  const handleChangeTheme = () => setTheme((prev) => (prev === "light" ? "dark" : "light"));
-
-  const value: ContextAppValue = useMemo(
-    () => ({
+  /*   const handleChangeTheme = () => setTheme((prev) => (prev === "light" ? "dark" : "light"));
+   */
+  const value: ContextAppValue = {
+    /*    () => ({
       handleChangeTheme,
       theme,
-    }),
-    [theme]
-  );
+    }), */
+  };
 
   return <GlobalContextApp.Provider value={value}>{children}</GlobalContextApp.Provider>;
 };
