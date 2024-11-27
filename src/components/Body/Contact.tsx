@@ -44,7 +44,8 @@ export const Contact = () => {
             <input
               id="name"
               className="py-4 rounded-lg px-6 placeholder:text-lg bg-stone-200 border border-slate-400 w-full"
-              {...register("name", { required: true, pattern: /^[A-Za-z]+$/i })}
+              type="text"
+              {...register("name", { required: true })}
               title="Nombre sólo acepta letras y espacios en blanco"
               placeholder="Ingresa tu nombre *"
             />
@@ -56,7 +57,7 @@ export const Contact = () => {
               id="email"
               className="py-4 rounded-lg px-6 placeholder:text-lg bg-stone-200 border border-slate-400 w-full"
               type="email"
-              {...register("email", { required: true, pattern: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/ })}
+              {...register("email", { required: true })}
               title="Email incorrecto"
               placeholder="Ingresa tu correo *"
             />
