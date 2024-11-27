@@ -10,7 +10,7 @@ import { Section } from "./components/Sections/Section";
 
 function App() {
   return (
-    <div className="dark:bg-darkBackground bg-stone-200 text-black dark:text-white px-9 ">
+    <div className=" bg-stone-200  dark:text-white px-9 ">
       <ContextApp>
         {/* Fondo y texto con soporte para modo oscuro y claro */}
 
