@@ -1,7 +1,9 @@
+import img from "../../assets/images/img.png";
+
 export const Home = () => {
   return (
     <aside className="flex items-center justify-center md:flex-col md:border-r md:fixed px-5 pt-10 animated-section border-slate-400">
-      <img src="src/assets/images/img.png" alt="David Medina" className="h-32 w-32 rounded-full md:h-60 md:w-60" />
+      <img src={img} alt="David Medina" className="h-32 w-32 rounded-full md:h-60 md:w-60" />
 
       <div className="text-gray-500 pl-4">
         <div className="mt-3 space-y-2 border-b p-3 border-slate-400">

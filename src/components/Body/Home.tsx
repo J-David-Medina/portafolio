@@ -1,3 +1,5 @@
+import pdf from "../../assets/pdf/CV.pdf";
+
 export const Body = () => {
   return (
     <>
@@ -5,7 +7,7 @@ export const Body = () => {
         <h2 className="font-bold text-4xl text-gray-500">Bienvenid@s</h2>
 
         <a
-          href="src/assets/pdf/CV.pdf"
+          href={pdf}
           target="_blank"
           rel="noopener noreferrer"
           className="bg-slate-400 px-4 py-3 text-white font-bold hover:bg-slate-500 rounded-lg flex items-center"

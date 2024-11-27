@@ -1,11 +1,4 @@
-import React, {
-  createContext,
-  ReactNode,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-} from "react";
+import React, { createContext, ReactNode, useContext, useEffect, useMemo, useState } from "react";
 
 interface ProviderProps {
   children: ReactNode;
@@ -22,9 +15,9 @@ const ContextApp: React.FC<ProviderProps> = ({ children }) => {
     const savedTheme = localStorage.getItem("theme");
     return savedTheme
       ? (savedTheme as "light" | "dark")
-      : window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light";
+      : /*     : window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark" */
+        "light";
   });
 
   useEffect(() => {
@@ -32,8 +25,7 @@ const ContextApp: React.FC<ProviderProps> = ({ children }) => {
     localStorage.setItem("theme", theme);
   }, [theme]);
 
-  const handleChangeTheme = () =>
-    setTheme((prev) => (prev === "light" ? "dark" : "light"));
+  const handleChangeTheme = () => setTheme((prev) => (prev === "light" ? "dark" : "light"));
 
   const value: ContextAppValue = useMemo(
     () => ({
@@ -43,11 +35,7 @@ const ContextApp: React.FC<ProviderProps> = ({ children }) => {
     [theme]
   );
 
-  return (
-    <GlobalContextApp.Provider value={value}>
-      {children}
-    </GlobalContextApp.Provider>
-  );
+  return <GlobalContextApp.Provider value={value}>{children}</GlobalContextApp.Provider>;
 };
 
 const useAppContext = () => {
